@@ -1,11 +1,11 @@
 /** CODE FOR READING QR-CODES */
 
-const wrapper = document.querySelector(".wrapper"),
-  readForm = document.querySelector(".read-form"),
-  fileInp = readForm.querySelector("input"),
-  infoText = readForm.querySelector("p"),
-  closeBtn = document.querySelector(".close"),
-  copyBtn = document.querySelector(".copy");
+const wrapper = document.querySelector(".wrapper")
+const readForm = document.querySelector(".read-form");
+const fileInp = readForm.querySelector("input");
+const infoText = readForm.querySelector("p");
+const closeBtn = document.querySelector(".close");
+const copyBtn = document.querySelector(".copy");
 
 function fetchRequest(userFile, formData) {
   infoText.innerText = "Scanning QR Code...";
@@ -60,7 +60,7 @@ const genCloseBtn = genWrapper.querySelector(".close-btn");
 const input = document.querySelector(".wrapper .form input");
 const img = document.querySelector(".wrapper div img");
 
-let imageSrc = '/imgs/qr_code_default.png';
+let imageSrc = "/imgs/qr_code_default.png";
 
 generateBtn.addEventListener("click", () => {
   let qrValue = input.value;
@@ -92,4 +92,6 @@ downloadBtn.addEventListener("click", async (event) => {
   URL.revokeObjectURL(objectUrl);
 });
 
-genCloseBtn.addEventListener("click", () => genWrapper.classList.remove("active"));
+genCloseBtn.addEventListener("click", () =>
+  genWrapper.classList.remove("active")
+);
